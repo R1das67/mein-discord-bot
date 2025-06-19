@@ -1,3 +1,4 @@
+import os
 import discord
 from discord.ext import commands
 from keep_alive import keep_alive  # Import
@@ -9,7 +10,7 @@ intents.webhooks = True
 intents.members = True
 
 # === KONFIGURATION ===
-BOT_TOKEN = ''
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 WHITELIST = ['1240934720095653909']
 
 bot = commands.Bot(command_prefix='!', intents=intents)
